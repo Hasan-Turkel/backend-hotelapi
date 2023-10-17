@@ -27,6 +27,8 @@ app.all('/', (req, res) => {
     })
 })
 
+app.use('/users', require('./routes/userRouter'))
+
 app.use(require("./middlewares/errorHandler"))
 
 app.listen(PORT, () => console.log('http://127.0.0.1:' + PORT))
