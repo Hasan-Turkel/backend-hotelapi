@@ -14,8 +14,8 @@ const RoomSchema = new mongoose.Schema({
     },
     price: {
         type: Number,
-        trim: true,
         required: true,
+        default:100
         
     }
    

@@ -24,10 +24,13 @@ const ReservationSchema = new mongoose.Schema({
     night: {
         type: Number,
         required: true,
+        default:1
     },
 
     price: {
         type: Number,
+        required:true,
+        default:200
         
     },
     totalPrice: {
