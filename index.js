@@ -29,6 +29,7 @@ app.all('/', (req, res) => {
 
 app.use('/users', require('./routes/userRouter'))
 app.use('/rooms', require('./routes/roomRouter'))
+app.use('/reservations', require('./routes/reservationRouter'))
 
 app.use(require("./middlewares/errorHandler"))
 

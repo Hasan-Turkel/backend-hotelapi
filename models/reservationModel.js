@@ -8,7 +8,7 @@ const ReservationSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true,
+        // required: true,
        
     },
     roomId: {
@@ -19,7 +19,6 @@ const ReservationSchema = new mongoose.Schema({
     guestNumber: {
         type: Number,
         required: true,
-        unique:true,
         },
     night: {
         type: Number,
