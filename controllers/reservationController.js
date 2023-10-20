@@ -39,11 +39,10 @@ module.exports = {
     },
     update: async(req, res)=>{
 
-        // const price = await Room.findOne({_id:req.params.roomId
-        // }, {_id:false, price:true})
-        // req.body.price = price.price
-        // req.body.totalPrice = price * req.body.night
-        // console.log(price);
+        const {price} = await Room.findOne({_id:req.body.roomId
+        }, {_id:false, price:true})
+        req.body.price = price
+        req.body.totalPrice = price * req.body.night
 
         const data = await Reservation.updateOne({_id:req.params.id})
         res.status(202).send({
